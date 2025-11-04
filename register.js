@@ -130,7 +130,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 formData.pharmacyAddress = document.getElementById('pharmacy-address').value;
             }
 
-            alert(`Registration Successful!\n\nName: ${name}\nEmail: ${email}\nRole: ${role}\n\nThis is a demo. Implement backend registration.`);
+            if (isValid) {
+    const formData = new FormData(registerForm);
+
+    fetch('register.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        registerForm.reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
         }
     });
 

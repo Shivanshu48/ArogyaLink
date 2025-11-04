@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">PharmaCare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pharmacy_dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pharmacy_list.html">Pharmacy List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-primary mb-2">Pharmacy Dashboard</h1>
+                <p class="text-muted">Manage your medicine stock and prescriptions</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card shadow-sm rounded-4 border-0">
+                    <div class="card-body p-4">
+                        <h2 class="h4 fw-semibold mb-4 text-primary">Add / Update Medicine</h2>
+                        <form id="medicineForm">
+                            <div class="mb-3">
+                                <label for="pharmacySelect" class="form-label">Select Pharmacy</label>
+                                <select class="form-select rounded-3" id="pharmacySelect" required>
+                                    <option value="">Choose pharmacy...</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="medicineName" class="form-label">Medicine Name</label>
+                                <input type="text" class="form-control rounded-3" id="medicineName" placeholder="Enter medicine name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="medicineQuantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control rounded-3" id="medicineQuantity" placeholder="Enter quantity" min="0" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="medicineAvailability" class="form-label">Availability</label>
+                                <select class="form-select rounded-3" id="medicineAvailability" required>
+                                    <option value="In Stock">In Stock</option>
+                                    <option value="Low Stock">Low Stock</option>
+                                    <option value="Out of Stock">Out of Stock</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary rounded-3 w-100">Add Medicine</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card shadow-sm rounded-4 border-0">
+                    <div class="card-body p-4">
+                        <h2 class="h4 fw-semibold mb-4 text-primary">Medicine Stock</h2>
+                        <div id="medicineList" class="medicine-list">
+                            <p class="text-muted text-center">Loading medicines...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card shadow-sm rounded-4 border-0">
+                    <div class="card-body p-4">
+                        <h2 class="h4 fw-semibold mb-4 text-primary">Recent Prescriptions</h2>
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Patient Name</th>
+                                        <th>Medicine</th>
+                                        <th>Dosage</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="prescriptionList">
+                                    <tr>
+                                        <td colspan="5" class="text-center text-muted">Loading prescriptions...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

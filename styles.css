@@ -214,3 +214,59 @@ body {
     font-weight: 600;
     margin-bottom: 0.75rem;
 }
+.pharmacy-card p {
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.pharmacy-card .stock-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.input-group-text {
+    border: 1px solid #e0e0e0;
+}
+
+.input-group .form-control:focus + .input-group-text {
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .table {
+        font-size: 0.875rem;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+.medicine-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.medicine-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.medicine-list::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.medicine-list::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}

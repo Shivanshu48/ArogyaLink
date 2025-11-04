@@ -1,0 +1,44 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #e6f9f5;
+}
+
+.navbar {
+  border-bottom: 2px solid #00bfa6;
+}
+
+.section-title {
+  color: #00bfa6;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: #00bfa6;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #009e8b;
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}

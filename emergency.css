@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e6f9f5 0%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.emergency-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 191, 166, 0.1);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.emergency-call-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.emergency-btn {
+    background: linear-gradient(135deg, #ff4757 0%, #e63946 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 30px 60px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 71, 87, 0.3);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.emergency-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 71, 87, 0.4);
+}
+
+.emergency-btn:active {
+    transform: translateY(-1px);
+}
+
+.pulse-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.doctors-section {
+    margin-top: 50px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.doctor-card {
+    background: #ffffff;
+    border: 2px solid #e6f9f5;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 191, 166, 0.05);
+}
+
+.doctor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 191, 166, 0.15);
+    border-color: #00bfa6;
+}
+
+.doctor-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.doctor-avatar {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #00bfa6 0%, #00a892 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.doctor-details {
+    flex: 1;
+}
+
+.doctor-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.doctor-specialty {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.doctor-status {
+    margin: 0;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-badge.available {
+    background: #d4f4dd;
+    color: #28a745;
+}
+
+.meet-btn {
+    background: linear-gradient(135deg, #00bfa6 0%, #00a892 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 5px 15px rgba(0, 191, 166, 0.2);
+    flex-shrink: 0;
+}
+
+.meet-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 191, 166, 0.3);
+}
+
+.meet-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .emergency-container {
+        padding: 25px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .emergency-btn {
+        padding: 25px 40px;
+        font-size: 1.2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .doctor-card {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .doctor-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .meet-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .emergency-container {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .emergency-btn {
+        padding: 20px 30px;
+        font-size: 1rem;
+    }
+
+    .doctor-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .doctor-name {
+        font-size: 1rem;
+    }
+
+    .doctor-specialty {
+        font-size: 0.85rem;
+    }
+}

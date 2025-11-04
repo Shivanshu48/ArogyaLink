@@ -55,7 +55,7 @@ body {
 
 .emergency-link {
     background: linear-gradient(135deg, #ff4757 0%, #e63946 100%) !important;
-    color: white !important;
+    color: black !important;
     padding: 8px 16px !important;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -251,6 +251,20 @@ body {
 .footer-link:hover {
     color: #00d4b4;
     text-decoration: underline;
+}
+
+a.emergency-link,
+.emergency-link {
+    background: linear-gradient(135deg, #ff4757 0%, #e63946 100%) !important;
+    color: black !important; /* font color black */
+    padding: 8px 16px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+a.emergency-link:hover,
+a.emergency-link:visited {
+    color: black !important; /* hover aur visited dono me black */
 }
 
 @media (max-width: 768px) {
